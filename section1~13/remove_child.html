@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="utf-8">
+    <title>JavaScriptの学習</title>
+    </head>
+    <body>
+      <ul id="list">
+        <li>要素1</li>
+        <li>要素2</li>
+        <li>要素3</li>
+        <li>要素4</li>
+        <li>要素5</li>
+      </ul>
+
+      <!-- <ul id="list">
+          <li id="newList">新しい要素です</li>
+        </ul> -->
+
+      <input type="button" value="削除" onclick="remove();">
+
+      <script>
+         function remove() {
+          
+          var parentElement = document.getElementById('list');
+          var lists = parentElement.getElementsByTagName('li');
+          var removeIndex = lists.length - 1;
+          parentElement.removeChild(lists[removeIndex]);
+          
+         }
+      </script>
+    </body>
+</html>
